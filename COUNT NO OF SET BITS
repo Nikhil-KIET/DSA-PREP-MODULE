@@ -1,0 +1,42 @@
+
+https://practice.geeksforgeeks.org/problems/set-bits0143/1?utm_source=geeksforgeeks&utm_medium=article_practice_tab&utm_campaign=article_practice_tab
+
+/******************************************************************************
+
+SET THE KTH BIT
+
+->APPROACH 1
+
+1->. WHILE N!=0 RUN LOOP
+2-> EXTRACT THE LAST EELEMT OF THE NUMBER BY BITWISE &1
+3-> IF EXTRACED BIT IS 1 THE N COUNT++;
+4-> LEFT SHIFT N BY 1 N>>1 TO DISCARD THE LAST USED BIT;
+
+
+
+*******************************************************************************/
+//{ Driver Code Starts
+#include <bits/stdc++.h>
+using namespace std;
+
+// } Driver Code Ends
+class Solution {
+  public:
+    int setBits(int N) {
+        // Write Your Code here
+        int count=0;
+        while(N!=0){
+            if(N&1){
+                count++;
+            }
+           N= N>>1;
+        }
+        return count;
+    }
+};
+
+//{ Driver Code Starts.
+
+
+// } Driver Code Ends
+
