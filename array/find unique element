@@ -1,0 +1,32 @@
+/******************************************************************************
+
+https://leetcode.com/problems/single-number/
+
+->APPROACH 1->xor APPROACH
+
+1->take a varble stor 0 in it becouse 0^anything give the same element
+2->xor the ans varible with all the lements of arry and store in ans it will give you i=unique element
+3->return ans;
+
+
+->approach 2 ->if sorted array->use binary search
+
+
+
+
+*******************************************************************************/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int ans=0;
+        for(int i=0;i<nums.size();i++){
+            ans=ans^nums[i];
+        }
+        return ans;
+    }
+};
+
