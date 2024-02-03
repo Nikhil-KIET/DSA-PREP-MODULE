@@ -1,1 +1,38 @@
+/******************************************************************************
 
+CONSTRUCTOR
+
+*******************************************************************************/
+#include <iostream>
+
+using namespace std;
+
+class animal{
+    public:
+    int weight;
+    
+    //deault CONSTRUCTOR
+    animal(){
+        cout<<"inside default"<<endl;
+    }
+    //parametrized
+    animal(int weight){
+        this->weight=weight;
+        cout<<"param ctor"<<endl;
+    }
+    //copy ctor
+    animal(animal &a){
+        this->weight=a.weight;
+        cout<<"copy const"<<endl;
+    }
+};
+
+int main()
+{
+    animal dog;
+    animal cat=dog;
+    animal patladog(9);
+    
+
+    return 0;
+}
