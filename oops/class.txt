@@ -1,0 +1,55 @@
+
+#include <iostream>
+
+using namespace std;
+ //**************************************************************
+
+//Synatx of class
+
+class boobs{
+    
+};
+ //**************************************************************
+
+//properties and methods
+class animal{
+    //access modifier ->public ->private ->protected
+    public:
+    //properties || state
+    int age;
+    string name;
+    
+    //methods || functions 
+    void eat(){
+        cout<< (*this).name<<" is eating"<<endl;
+    }
+};
+ //**************************************************************
+
+int main()
+{
+    //object creation;
+     //**************************************************************
+    //static
+    animal dog;
+    dog.name="duggu";
+    // dot operator;
+    dog.eat();
+    cout<< endl;
+    
+ //**************************************************************
+    //dyanmic object
+    animal* cat= new animal;
+    //derefrence 
+    
+    (*cat).eat();
+    //arrow 
+    cat->name="kalla billa";
+    cat->eat();
+//**************************************************************
+
+    
+    
+
+    
+}
